@@ -46,3 +46,41 @@ Munch munch
 Grrr says (animal name) .
 '''
 
+
+class Animal():
+    def __init__(self, name):
+        print("An animal has been born")
+        self.name = name
+    def eat(self):
+        print("Munch munch")
+    def make_noise(self):
+        print("Grrr says",self.name)
+class Cat(Animal):
+    def __init__(self, name):
+        super().__init__(name)
+        print("A cat has been born")
+    def make_noise(self):
+        print("Meow says",self.name)
+
+class Dog(Animal):
+    def __init__(self, name):
+        super().__init__(name)
+        print("A dog has been born")
+    def make_noise(self):
+        print("Bark says",self.name)
+def main():
+    fizz = Cat("Fizzbuzz")
+    fizz.eat()
+    fizz.make_noise()
+    jim = Dog("Jim")
+    jim.eat()
+    jim.make_noise()
+    bo = Dog('Bo')
+    bo.eat()
+    bo.make_noise()
+    duke = Animal('Duke')
+    duke.eat()
+    duke.make_noise()
+
+if __name__ =="__main__":
+    main()
